@@ -15,17 +15,13 @@
 */
 
 class Employee {
-  name: string;
-  department: string;
-  salary: number;
+  constructor(
+    public name: string,
+    public department: string,
+    public salary: number
+  ) {}
 
-  constructor(name: string, department: string, salary: number) {
-    this.name = name;
-    this.department = department;
-    this.salary = salary;
-  }
-
-  getEmployeeDetails() {
+  getEmployeeDetails(): string {
     return `Name: ${this.name}, Department: ${this.department}, Salary: ${this.salary}`;
   }
 }
